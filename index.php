@@ -9,20 +9,35 @@
 </head>
 
 <body>
-    <h1> My php Page</h1>
+    <div style="width:500px;margin:auto">
+    <h1> Cars Rental </h1>
     <?php 
+
+        $cars = array("Honda","Mazda","Skoda");
         if(array_key_exists("user",$_GET)){
             $userName = $_GET["user"];
-            echo "<h1> Hi $userName </h1>";
+            echo "<h1> Hi $userName  </h1>";
         }
-        for ($x = 0; $x <= 999999999; $x++) {
-           
-          }
-                      
-        $txt = "My new PHP website";
+        // print_r($cars);
+        foreach($cars as $singleCar){
+            echo "<h3> $singleCar <button id='$singleCar' onclick='rentCar($singleCar)'>Rent</button></h3>";
+        } 
+        $txt = "Please select your car";
         echo "<h2>".$txt."</h2>";
-    ?>
-    <a href="/php72/app.php">Go To App</a>
-</body>
 
+
+
+    ?>
+
+
+    <a href="/php72/contact.php">Go To Contact</a>
+    </div>
+</body>
+        <script> 
+
+            function rentCar(car){
+                console.log(car.id)
+                window.location.href = "http://localhost/php72/car.php?cartype=" + car.id
+            }
+         </script>
 </html>
