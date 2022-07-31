@@ -20,3 +20,7 @@ echo "Hello PHP";
 1. Create Php application with 2 pages
 2. Contact me page with link go to home page
 3. Home page - with link "Go to contact" page
+
+# ex - 2 
+1. Create Car page
+2. show the car type in <h1>
