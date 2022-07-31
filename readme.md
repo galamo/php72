@@ -24,3 +24,9 @@ echo "Hello PHP";
 # ex - 2 
 1. Create Car page
 2. show the car type in <h1>
+
+
+# ex - 3 login page
+1. check if the username === "theuser" and password === "theuserpass"
+2. Show Login Success message
+3. otherwise redirect the user to the login again

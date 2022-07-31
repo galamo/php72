@@ -10,34 +10,35 @@
 
 <body>
     <div style="width:500px;margin:auto">
-    <h1> Cars Rental </h1>
-    <?php 
+        <h1> Cars Rental </h1>
+        <h1> <a href="/php72/login.php"> Login </a> </h1>
+        <?php
 
-        $cars = array("Honda","Mazda","Skoda");
-        if(array_key_exists("user",$_GET)){
+        $cars = array("Honda", "Mazda", "Skoda");
+        if (array_key_exists("user", $_GET)) {
             $userName = $_GET["user"];
             echo "<h1> Hi $userName  </h1>";
         }
         // print_r($cars);
-        foreach($cars as $singleCar){
+        foreach ($cars as $singleCar) {
             echo "<h3> $singleCar <button id='$singleCar' onclick='rentCar($singleCar)'>Rent</button></h3>";
-        } 
+        }
         $txt = "Please select your car";
-        echo "<h2>".$txt."</h2>";
+        echo "<h2>" . $txt . "</h2>";
 
 
 
-    ?>
+        ?>
 
 
-    <a href="/php72/contact.php">Go To Contact</a>
+        <a href="/php72/contact.php">Go To Contact</a>
     </div>
 </body>
-        <script> 
+<script>
+function rentCar(car) {
+    console.log(car.id)
+    window.location.href = "http://localhost/php72/car.php?cartype=" + car.id
+}
+</script>
 
-            function rentCar(car){
-                console.log(car.id)
-                window.location.href = "http://localhost/php72/car.php?cartype=" + car.id
-            }
-         </script>
 </html>
