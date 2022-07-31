@@ -1,3 +1,17 @@
+<?php
+
+$error_username = "";
+$error_password = "";
+
+if (count($_POST) > 0) {
+    if ($_POST["username"] == "") {
+        $error_username = "user is required";
+    }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,12 +27,14 @@
 <body>
     <div class="container">
         <h1>Login</h1>
-        <form method="POST" action="login_action.php">
+        <form method="POST" action="login.php">
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">@</span>
                 <input name="username" type=" text" class="form-control" placeholder="Username"
                     aria-describedby="basic-addon1">
+                <span style="color:red"> <?= $error_username ?> </span>
             </div>
+
 
             <div class="input-group">
                 <input name="password" type="text" class="form-control" placeholder="password"
