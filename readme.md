@@ -1,2 +1,22 @@
-# Prerequiesites
-- Download and install Xampp https://www.apachefriends.org/ 
+# Prerequisites
+- Download and install XAMPP https://www.apachefriends.org/ 
+- Check your XAMPP 
+- Lunch the application 
+- Click on Start in  Apache row
+- Make sure your port 80 is not in use
+- Create your own repository project in `C:\xampp\htdocs`
+- Name `app`
+- Open this folder in VScode
+- Create `index.php` file
+- Insert the following content inside
+```php
+<?php
+echo "Hello PHP";
+?>
+```
+
+
+# ex - 1
+1. Create Php application with 2 pages
+2. Contact me page with link go to home page
+3. Home page - with link "Go to contact" page
