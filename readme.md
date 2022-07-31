@@ -30,3 +30,11 @@ echo "Hello PHP";
 1. check if the username === "theuser" and password === "theuserpass"
 2. Show Login Success message
 3. otherwise redirect the user to the login again
+
+# ex - 4 login page
+1. add error to password - required password and contain more than 5 characters
+
+# ex 5 - HW.
+1. Create Car rental Form - to order a car.
+2. Submit the form will redirect to the order page
+3. create shared footer between home and contact page

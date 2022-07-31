@@ -3,9 +3,26 @@
 $error_username = "";
 $error_password = "";
 
-if (count($_POST) > 0) {
+if (count($_POST) > 0 && $_SERVER["REQUEST_METHOD"] === "POST") {
     if ($_POST["username"] == "") {
         $error_username = "user is required";
+    }
+    if ($_POST["password"] == "") {
+        $error_password = "password is required";
+    }
+    if (validateCredentials($_POST["username"], $_POST["password"])) {
+        header("Location:http://localhost/php72/contact.php");
+    } else {
+        header("Location:http://localhost/php72/login.php");
+    }
+}
+
+function validateCredentials($u, $p)
+{
+    if ($u == "aviv" && $p == "aviv") {
+        return true;
+    } else {
+        return false;
     }
 }
 
@@ -40,7 +57,11 @@ if (count($_POST) > 0) {
                 <input name="password" type="text" class="form-control" placeholder="password"
                     aria-describedby="basic-addon2">
                 <span class="input-group-addon" id="basic-addon2">password</span>
+                <div style="display:block">
+                    <span style="color:red"> <?= $error_password ?> </span>
+                </div>
             </div>
+
             <button class="btn btn-primary" type="submit"> Login</button>
         </form>
     </div>

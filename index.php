@@ -11,9 +11,8 @@
 <body>
     <div style="width:500px;margin:auto">
         <h1> Cars Rental </h1>
-        <h1> <a href="/php72/login.php"> Login </a> </h1>
         <?php
-
+        require_once("header.php");
         $cars = array("Honda", "Mazda", "Skoda");
         if (array_key_exists("user", $_GET)) {
             $userName = $_GET["user"];
