@@ -7,7 +7,6 @@
     <h1> Cars Rental </h1>
     <?php
     require_once("header.php");
-
     ?>
     <form action="/action_page.php">
         <label for="fname">First name:</label><br>
