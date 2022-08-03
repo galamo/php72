@@ -47,7 +47,7 @@ echo "Hello PHP";
 4. Form contain 3 inputs
 5. input1: string - tshirt color
 6. input2: string - cupon
-7. input3: ddl -  tshirt size 
+7. select -  tshirt size 
 8. button - Buy Tshirt
 9. after clicking Buy button will redirect to 
 `https://tmax.co.il/%D7%94%D7%93%D7%A4%D7%A1%D7%AA-%D7%97%D7%95%D7%9C%D7%A6%D7%95%D7%AA/%D7%94%D7%93%D7%A4%D7%A1%D7%AA-%D7%97%D7%95%D7%9C%D7%A6%D7%95%D7%AA-%D7%9C%D7%92%D7%91%D7%A8%D7%99%D7%9D/22-%D7%98%D7%99%D7%A9%D7%A8%D7%98-unisex-%D7%A9%D7%A8%D7%95%D7%95%D7%9C-%D7%A7%D7%A6%D7%A8-%D7%A6%D7%95%D7%95%D7%90%D7%A8%D7%95%D7%9F-%D7%A2%D7%92%D7%95%D7%9C-%D7%9B%D7%95%D7%AA%D7%A0%D7%94-%D7%A4%D7%95%D7%9C%D7%99%D7%A1%D7%98%D7%A8-ultra-soft`
