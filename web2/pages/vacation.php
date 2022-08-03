@@ -15,10 +15,13 @@ require_once("../app-pages/header.php");
             <label for="formFileMultiple" class="form-label">date</label>
             <input name="date" class="form-control" type="date" id="formFileMultiple">
         </div>
-        <div class="mb-3">
-            <label for="formFileDisabled" class="form-label">nights</label>
-            <input name="nights" class="form-control" type="number" id="formFileDisabled">
-        </div>
+
+        <select id="nightsSelectUi" name="nights" class="form-select" aria-label="Default select example">
+
+        </select>
+
+
+
         <div>
             <button type="submit" class="btn btn-success"> Order Now </button>
         </div>

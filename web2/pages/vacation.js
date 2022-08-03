@@ -2,18 +2,20 @@ async function getLocations() {
     try {
         const result = await fetch("http://localhost/php72/web2/data/locations.php")
         const data = await result.json();
-        draw(data)
+        const [nights, locations] = data
+        draw(locations, "locationsSelectUi")
+        draw(nights, "nightsSelectUi")
     } catch (ex) {
         alert("error!!!!!")
     }
 }
 
-function draw(locations) {
-    if (!Array.isArray(locations)) return;
-    const locationsSelectUi = document.querySelector("#locationsSelectUi");
-    locationsSelectUi.innerHTML = "";
-    const optionsUi = locations.map(getOption);
-    locationsSelectUi.append(...optionsUi)
+function draw(data, uiId) {
+    if (!Array.isArray(data)) return;
+    const dataSelectUi = document.querySelector(`#${uiId}`);
+    dataSelectUi.innerHTML = "";
+    const optionsUi = data.map(getOption);
+    dataSelectUi.append(...optionsUi)
     function getOption(optionString) {
         const option = document.createElement("option")
         option.id = optionString;
